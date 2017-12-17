@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class aboutPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_about_page);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -41,43 +41,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-        ImageButton rollButton = (ImageButton) findViewById(R.id.rollButton);
-
-        final ImageView leftDice = (ImageView) findViewById(R.id.img_leftdice);
-        final ImageView rightDice = (ImageView) findViewById(R.id.img_rightdice);
-
-        rollButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d("Dicey" , "The button has been pressed!");
-
-                Random rng = new Random();
-
-                int x;
-
-                int num1 = rng.nextInt(6);
-                int num2 = rng.nextInt(6);
-
-                Log.d("Dicey", "Random Number 1 is " + num1 + " and Random Number 2 is " + num2);
-
-                final int diceArr[] = {
-                        R.drawable.dice1,
-                        R.drawable.dice2,
-                        R.drawable.dice3,
-                        R.drawable.dice4,
-                        R.drawable.dice5,
-                        R.drawable.dice6
-                };
-                leftDice.setImageResource(diceArr[num1]);
-                rightDice.setImageResource(diceArr[num2]);
-            }
-        });
-
-
-
+        if(getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
     }
 
     @Override
@@ -93,31 +59,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if(id == R.id.onedice){
-            Intent intent = new Intent(MainActivity.this, onedice.class);
+            Intent intent = new Intent(aboutPage.this, onedice.class);
             startActivity(intent);
             finish();
         }
 
         if(id == R.id.twodice){
-            Toast.makeText(this, "You are already here!",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(aboutPage.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         }
 
         if(id == R.id.threedice){
-            Intent intent = new Intent(MainActivity.this, threeDice.class);
+            Intent intent = new Intent(aboutPage.this, threeDice.class);
             startActivity(intent);
             finish();
         }
 
         if(id == R.id.specialdice){
-            Intent intent = new Intent(MainActivity.this, specialDice.class);
+            Intent intent = new Intent(aboutPage.this, specialDice.class);
             startActivity(intent);
             finish();
         }
 
         if(id == R.id.about){
-            Intent intent = new Intent(MainActivity.this, aboutPage.class);
-            startActivity(intent);
-            finish();
+            Toast.makeText(this, "You are already here!", Toast.LENGTH_SHORT).show();
         }
 
         if(id == R.id.contact){

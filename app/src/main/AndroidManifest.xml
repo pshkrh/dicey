@@ -20,7 +20,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".onedice" />
         <activity android:name=".threeDice" />
-        <activity android:name=".specialDice"></activity>
+        <activity android:name=".specialDice" />
+        <activity android:name=".aboutPage"></activity>
     </application>
 
 </manifest>

@@ -118,6 +118,21 @@ public class threeDice extends AppCompatActivity implements NavigationView.OnNav
             startActivity(intent);
             finish();
         }
+        if(id == R.id.about){
+            Intent intent = new Intent(threeDice.this, aboutPage.class);
+            startActivity(intent);
+            finish();
+        }
+        if(id == R.id.contact){
+            //Toast.makeText(this, "Send an e-mail to pshkrh@gmail.com for queries.", Toast.LENGTH_SHORT).show();
+            Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+            emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            emailIntent.setType("vnd.android.cursor.item/email");
+            emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"pshkrh@gmail.com"});
+            emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Feedback / Query regarding Dicey");
+            emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "");
+            startActivity(Intent.createChooser(emailIntent, "Send mail using..."));
+        }
         return false;
     }
 }
