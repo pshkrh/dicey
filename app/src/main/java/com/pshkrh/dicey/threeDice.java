@@ -119,7 +119,7 @@ public class threeDice extends AppCompatActivity implements NavigationView.OnNav
             finish();
         }
         if(id == R.id.about){
-            Intent intent = new Intent(threeDice.this, aboutPage.class);
+            Intent intent = new Intent(threeDice.this, aboutUs.class);
             startActivity(intent);
             finish();
         }

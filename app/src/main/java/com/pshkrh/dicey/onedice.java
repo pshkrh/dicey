@@ -112,7 +112,7 @@ public class onedice extends AppCompatActivity implements NavigationView.OnNavig
             finish();
         }
         if(id == R.id.about){
-            Intent intent = new Intent(onedice.this, aboutPage.class);
+            Intent intent = new Intent(onedice.this, aboutUs.class);
             startActivity(intent);
             finish();
         }

@@ -21,7 +21,8 @@
         <activity android:name=".onedice" />
         <activity android:name=".threeDice" />
         <activity android:name=".specialDice" />
-        <activity android:name=".aboutPage"></activity>
+        <activity android:name=".aboutPage" />
+        <activity android:name=".aboutUs"></activity>
     </application>
 
 </manifest>

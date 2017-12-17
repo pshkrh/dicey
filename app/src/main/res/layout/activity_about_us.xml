@@ -7,9 +7,13 @@
     android:id="@+id/nav"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onedice"
+    tools:context=".aboutUs"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
+
+
+
+
 
 
     <LinearLayout
@@ -21,7 +25,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
 
-        tools:context=".onedice" >
+        tools:context=".aboutUs" >
         <!-- android:background="@drawable/background" -->
 
         <include
@@ -37,7 +41,7 @@
 
 
             <TextView
-                android:id="@+id/twodicetext"
+                android:id="@+id/txt_about"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -46,46 +50,22 @@
                 android:layout_centerVertical="true"
                 android:layout_marginTop="6dp"
                 android:fontFamily="sans-serif-condensed"
-                android:text="1 Dice"
+                android:text="About"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
-                android:textSize="70sp"
-                android:textStyle="bold|italic" />
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
         </RelativeLayout>
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/txt_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical"
-            android:paddingBottom="30dp"
-            android:paddingTop="30dp">
-
-            <ImageView
-                android:id="@+id/img_leftdice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="50sp"
-                app:srcCompat="@drawable/dice2" />
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageButton
-                android:id="@+id/rollButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="54dp"
-                android:background="#fafafa"
-                app:srcCompat="@drawable/rollbig2" />
-
-
-        </RelativeLayout>
+            android:layout_margin="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:text=""
+            android:textSize="20sp" />
 
 
     </LinearLayout>

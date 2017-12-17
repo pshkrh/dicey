@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if(id == R.id.about){
-            Intent intent = new Intent(MainActivity.this, aboutPage.class);
+            Intent intent = new Intent(MainActivity.this, aboutUs.class);
             startActivity(intent);
             finish();
         }
