@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Dicey</string>
     <string name="button_text">Roll Dice</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
