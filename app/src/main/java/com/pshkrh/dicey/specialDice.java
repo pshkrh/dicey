@@ -1,6 +1,5 @@
 package com.pshkrh.dicey;
 
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
@@ -21,7 +20,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import java.util.Random;
 
-public class threeDice extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class specialDice extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
@@ -30,7 +29,7 @@ public class threeDice extends AppCompatActivity implements NavigationView.OnNav
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_three_dice);
+        setContentView(R.layout.activity_special_dice);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -48,9 +47,7 @@ public class threeDice extends AppCompatActivity implements NavigationView.OnNav
 
         ImageButton rollButton = (ImageButton) findViewById(R.id.rollButton);
 
-        final ImageView leftDice = (ImageView) findViewById(R.id.img_leftdice);
-        final ImageView middleDice = (ImageView) findViewById(R.id.img_middledice);
-        final ImageView rightDice = (ImageView) findViewById(R.id.img_rightdice);
+        final ImageView spDice = (ImageView) findViewById(R.id.img_spdice);
 
         rollButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,23 +58,33 @@ public class threeDice extends AppCompatActivity implements NavigationView.OnNav
 
                 int x;
 
-                int num1 = rng.nextInt(6);
+                int num1 = rng.nextInt(20);
 
                 Log.d("Dicey", "Random Number 1 is " + num1);
 
                 final int diceArr[] = {
-                        R.drawable.dice1,
-                        R.drawable.dice2,
-                        R.drawable.dice3,
-                        R.drawable.dice4,
-                        R.drawable.dice5,
-                        R.drawable.dice6
+                        R.drawable.sdice1,
+                        R.drawable.sdice2,
+                        R.drawable.sdice3,
+                        R.drawable.sdice4,
+                        R.drawable.sdice5,
+                        R.drawable.sdice6,
+                        R.drawable.sdice7,
+                        R.drawable.sdice8,
+                        R.drawable.sdice9,
+                        R.drawable.sdice10,
+                        R.drawable.sdice11,
+                        R.drawable.sdice12,
+                        R.drawable.sdice13,
+                        R.drawable.sdice14,
+                        R.drawable.sdice15,
+                        R.drawable.sdice16,
+                        R.drawable.sdice17,
+                        R.drawable.sdice18,
+                        R.drawable.sdice19,
+                        R.drawable.sdice20
                 };
-                leftDice.setImageResource(diceArr[num1]);
-                num1=rng.nextInt(6);
-                middleDice.setImageResource(diceArr[num1]);
-                num1=rng.nextInt(6);
-                rightDice.setImageResource(diceArr[num1]);
+                spDice.setImageResource(diceArr[num1]);
             }
         });
 
@@ -98,25 +105,25 @@ public class threeDice extends AppCompatActivity implements NavigationView.OnNav
         int id = item.getItemId();
 
         if(id == R.id.onedice){
-            Intent intent = new Intent(threeDice.this, onedice.class);
+            Intent intent = new Intent(specialDice.this, onedice.class);
             startActivity(intent);
             finish();
         }
 
         if(id == R.id.twodice){
-            Intent intent = new Intent(threeDice.this, MainActivity.class);
+            Intent intent = new Intent(specialDice.this, MainActivity.class);
             startActivity(intent);
             finish();
         }
 
         if(id == R.id.threedice){
-            Toast.makeText(this, "You are already here!",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(specialDice.this, threeDice.class);
+            startActivity(intent);
+            finish();
         }
 
         if(id == R.id.specialdice){
-            Intent intent = new Intent(threeDice.this, specialDice.class);
-            startActivity(intent);
-            finish();
+            Toast.makeText(this, "You are already here!",Toast.LENGTH_SHORT).show();
         }
         return false;
     }

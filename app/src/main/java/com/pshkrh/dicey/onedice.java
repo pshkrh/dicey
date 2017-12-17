@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 import java.util.Random;
@@ -44,7 +45,7 @@ public class onedice extends AppCompatActivity implements NavigationView.OnNavig
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        Button rollButton = (Button) findViewById(R.id.rollButton);
+        ImageButton rollButton = (ImageButton) findViewById(R.id.rollButton);
 
         final ImageView leftDice = (ImageView) findViewById(R.id.img_leftdice);
 
@@ -100,11 +101,15 @@ public class onedice extends AppCompatActivity implements NavigationView.OnNavig
         }
 
         if(id == R.id.threedice){
-            Toast.makeText(this, "This is the Three Dice Option!",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(onedice.this, threeDice.class);
+            startActivity(intent);
+            finish();
         }
 
         if(id == R.id.specialdice){
-            Toast.makeText(this, "This is the Special Dice Option!",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(onedice.this, specialDice.class);
+            startActivity(intent);
+            finish();
         }
         return false;
     }

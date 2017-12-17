@@ -7,7 +7,7 @@
     android:id="@+id/nav"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".onedice"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
@@ -25,7 +25,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
 
-        tools:context=".MainActivity" >
+        tools:context=".onedice" >
         <!-- android:background="@drawable/background" -->
 
         <include
@@ -78,19 +78,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
+            <!--<Button
                 android:id="@+id/rollButton"
                 android:layout_width="150dp"
                 android:layout_height="55dp"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_centerInParent="true"
-                android:background="@color/diceyOrange"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:text="@string/button_text"
                 android:textColor="@android:color/background_light"
-                android:textSize="20sp" />
+                android:textSize="20sp" />-->
 
-
+            <ImageButton
+                android:id="@+id/rollButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="54dp"
+                android:background="#fafafa"
+                app:srcCompat="@drawable/rollbig2" />
 
 
         </RelativeLayout>

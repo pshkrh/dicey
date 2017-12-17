@@ -7,9 +7,14 @@
     android:id="@+id/nav"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".specialDice"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
+
+
+
+
+
 
     <LinearLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -20,8 +25,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
 
-        tools:context=".MainActivity" >
-    <!-- android:background="@drawable/background" -->
+        tools:context=".specialDice" >
+        <!-- android:background="@drawable/background" -->
 
         <include
             layout="@layout/nav_actionbar"
@@ -45,10 +50,10 @@
                 android:layout_centerVertical="true"
                 android:layout_marginTop="6dp"
                 android:fontFamily="sans-serif-condensed"
-                android:text="2 Dice"
+                android:text="Special Dice"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
-                android:textSize="70sp"
+                android:textSize="60sp"
                 android:textStyle="bold|italic" />
         </RelativeLayout>
 
@@ -61,20 +66,12 @@
             android:paddingTop="30dp">
 
             <ImageView
-                android:id="@+id/img_leftdice"
+                android:id="@+id/img_spdice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginTop="50sp"
-                app:srcCompat="@drawable/dice1" />
-
-            <ImageView
-                android:id="@+id/img_rightdice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginTop="50sp"
-                app:srcCompat="@drawable/dice6" />
+                app:srcCompat="@drawable/sdice20" />
         </LinearLayout>
 
         <RelativeLayout
@@ -93,16 +90,19 @@
                 android:textColor="@android:color/background_light"
                 android:textSize="20sp" />-->
 
-
             <ImageButton
                 android:id="@+id/rollButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="54dp"
+                android:layout_marginTop="24dp"
                 android:background="#fafafa"
                 app:srcCompat="@drawable/rollbig2" />
+
+
+
+
         </RelativeLayout>
 
 
@@ -110,6 +110,6 @@
 
     <include
         layout="@layout/navbar"
-    />
+        />
 
 </android.support.v4.widget.DrawerLayout>

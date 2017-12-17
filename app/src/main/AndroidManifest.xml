@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".onedice" />
-        <activity android:name=".threeDice"></activity>
+        <activity android:name=".threeDice" />
+        <activity android:name=".specialDice"></activity>
     </application>
 
 </manifest>

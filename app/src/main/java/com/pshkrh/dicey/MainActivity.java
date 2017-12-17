@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        Button rollButton = (Button) findViewById(R.id.rollButton);
+        ImageButton rollButton = (ImageButton) findViewById(R.id.rollButton);
 
         final ImageView leftDice = (ImageView) findViewById(R.id.img_leftdice);
         final ImageView rightDice = (ImageView) findViewById(R.id.img_rightdice);
@@ -92,22 +93,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if(id == R.id.onedice){
-            Toast.makeText(this, "This is the One Dice Option!",Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(MainActivity.this, onedice.class);
             startActivity(intent);
             finish();
         }
 
         if(id == R.id.twodice){
-            Toast.makeText(this, "This is the Two Dice Option!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "You are already here!",Toast.LENGTH_SHORT).show();
         }
 
         if(id == R.id.threedice){
-            Toast.makeText(this, "This is the Three Dice Option!",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, threeDice.class);
+            startActivity(intent);
+            finish();
         }
 
         if(id == R.id.specialdice){
-            Toast.makeText(this, "This is the Special Dice Option!",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, specialDice.class);
+            startActivity(intent);
+            finish();
         }
         return false;
     }
