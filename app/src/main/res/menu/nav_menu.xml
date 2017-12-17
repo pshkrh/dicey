@@ -3,32 +3,36 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/onedice"
-            android:icon="@mipmap/navicon1"
-            android:title="1 Dice">
+        <item android:title="Select Dice">
+            <menu>
+                <item
+                    android:id="@+id/onedice"
+                    android:icon="@mipmap/navicon1"
+                    android:title="1 Dice">
 
-        </item>
+                </item>
 
-        <item
-            android:id="@+id/twodice"
-            android:icon="@mipmap/navicon2"
-            android:title="2 Dice">
+                <item
+                    android:id="@+id/twodice"
+                    android:icon="@mipmap/navicon2"
+                    android:title="2 Dice">
 
-        </item>
+                </item>
 
-        <item
-            android:id="@+id/threedice"
-            android:icon="@mipmap/navicon3"
-            android:title="3 Dice">
+                <item
+                    android:id="@+id/threedice"
+                    android:icon="@mipmap/navicon3"
+                    android:title="3 Dice">
 
-        </item>
+                </item>
 
-        <item
-            android:id="@+id/specialdice"
-            android:icon="@mipmap/icon20"
-            android:title="Special Dice">
+                <item
+                    android:id="@+id/specialdice"
+                    android:icon="@mipmap/icon20"
+                    android:title="Special Dice">
 
+                </item>
+            </menu>
         </item>
     </group>
 

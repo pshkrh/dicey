@@ -37,7 +37,7 @@ public class aboutUs extends AppCompatActivity implements NavigationView.OnNavig
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView t = findViewById(R.id.txt_info);
-        t.setText("Dicey, made by Pushkar Kurhekar.\n\nSpecial Thanks to Aniruddh Iyer for designing the graphics for this app. This would not have been possible without him.\n\nThanks for downloading!");
+        t.setText("Dicey, made by Pushkar Kurhekar.\n\nWhen you're playing a board game, or any other game without a dice, you can use Dicey as a substitute for them!\n\nSpecial Thanks to Aniruddh Iyer for designing the graphics for this app. This would not have been possible without him.\n\nThanks for downloading!");
     }
 
     @Override
