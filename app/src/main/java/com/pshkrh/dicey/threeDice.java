@@ -128,7 +128,7 @@ public class threeDice extends AppCompatActivity implements NavigationView.OnNav
             Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
             emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             emailIntent.setType("vnd.android.cursor.item/email");
-            emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"pshkrh@gmail.com"});
+            emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"diceydev@gmail.com"});
             emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Feedback / Query regarding Dicey");
             emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "");
             startActivity(Intent.createChooser(emailIntent, "Send mail using..."));

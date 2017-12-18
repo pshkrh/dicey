@@ -1,6 +1,7 @@
 package com.pshkrh.dicey;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -58,8 +59,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 int x;
 
-                int num1 = rng.nextInt(6);
-                int num2 = rng.nextInt(6);
+                final int num1 = rng.nextInt(6);
+                final int num2 = rng.nextInt(6);
 
                 Log.d("Dicey", "Random Number 1 is " + num1 + " and Random Number 2 is " + num2);
 
@@ -71,6 +72,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         R.drawable.dice5,
                         R.drawable.dice6
                 };
+
+                x=diceArr[num1];
+
+                System.out.println(x);
+
                 leftDice.setImageResource(diceArr[num1]);
                 rightDice.setImageResource(diceArr[num2]);
             }
@@ -125,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
             emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             emailIntent.setType("vnd.android.cursor.item/email");
-            emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"pshkrh@gmail.com"});
+            emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"diceydev@gmail.com"});
             emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Feedback / Query regarding Dicey");
             emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "");
             startActivity(Intent.createChooser(emailIntent, "Send mail using..."));

@@ -53,7 +53,7 @@
                 android:text="Special Dice"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
-                android:textSize="60sp"
+                android:textSize="45sp"
                 android:textStyle="bold|italic" />
         </RelativeLayout>
 
@@ -109,7 +109,6 @@
     </LinearLayout>
 
     <include
-        layout="@layout/navbar"
-        />
+        layout="@layout/navbar" />
 
 </android.support.v4.widget.DrawerLayout>

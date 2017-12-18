@@ -37,7 +37,11 @@ public class aboutUs extends AppCompatActivity implements NavigationView.OnNavig
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TextView t = findViewById(R.id.txt_info);
-        t.setText("Dicey, made by Pushkar Kurhekar.\n\nWhen you're playing a board game, or any other game without a dice, you can use Dicey as a substitute for them!\n\nSpecial Thanks to Aniruddh Iyer for designing the graphics for this app. This would not have been possible without him.\n\nThanks for downloading!");
+        t.setText("Dicey, created by Pushkar Kurhekar.\n\nWhen you are playing a board game or any other game without dice, you can use Dicey as a substitute for them!\n\nYou can choose one dice, two dice, three dice or even a special D&D dice - a D20.\n\nSpecial thanks to Aniruddh Iyer for designing the graphics for this app.\n\nThanks for downloading!");
+
+        t = findViewById(R.id.txt_ver);
+        String versionName = BuildConfig.VERSION_NAME;
+        t.setText("Version " + versionName);
     }
 
     @Override
@@ -85,7 +89,7 @@ public class aboutUs extends AppCompatActivity implements NavigationView.OnNavig
             Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
             emailIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             emailIntent.setType("vnd.android.cursor.item/email");
-            emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"pshkrh@gmail.com"});
+            emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[] {"diceydev@gmail.com"});
             emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Feedback / Query regarding Dicey");
             emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "");
             startActivity(Intent.createChooser(emailIntent, "Send mail using..."));
